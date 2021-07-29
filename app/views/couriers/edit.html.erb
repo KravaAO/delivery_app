@@ -1,0 +1,19 @@
+<h1><%= @courier.name %></h1>
+
+<p><%= @courier.email %></p>
+
+<%= form_with model: @courier do |form| %>
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :email %><br>
+    <%= form.text_area :email %><br>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
